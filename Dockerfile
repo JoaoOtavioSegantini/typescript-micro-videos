@@ -6,8 +6,8 @@ RUN mkdir -p /usr/share/man/man1 && \
     git \
     ca-certificates \
     default-jdk \
-    gpg \
-    vim \
+#    gpg \
+#    vim \
     zsh \
     curl \
     wget \
