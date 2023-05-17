@@ -1,13 +1,11 @@
 FROM node:14.17.0-slim
 
 RUN mkdir -p /usr/share/man/man1 && \
-    echo "deb http://archive.debian.org/debian stretch main contrib non-free" > /etc/apt/sources.list && \
+    echo "deb http://ftp.debian.org/debian stable main" > /etc/apt/sources.list && \
     apt update && apt install -y \
     git \
     ca-certificates \
-    default-jdk \
-#    gpg \
-#    vim \
+    openjdk-11-jre \
     zsh \
     curl \
     wget \
