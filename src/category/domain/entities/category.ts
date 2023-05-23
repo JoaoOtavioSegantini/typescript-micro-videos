@@ -13,9 +13,10 @@ export type CategoryProps = {
 export class Category extends Entity<CategoryProps> {
   constructor(public readonly props: CategoryProps, id?: UniqueEntityId) {
     super(props, id);
+    const now = new Date();
     this.props.is_active = this.props.is_active ?? true;
-    this.props.created_at = this.props.created_at ?? new Date();
-    this.props.updated_at = this.props.updated_at ?? new Date();
+    this.props.created_at = this.props.created_at ?? now;
+    this.props.updated_at = this.props.updated_at ?? now;
     this.description = this.props.description ?? null;
     this.props.deleted_at = this.props.deleted_at ?? null;
   }
